@@ -23,12 +23,7 @@ pipeline {
         stage('Slack notification ...') { 
             steps {
                 echo 'Notificating ...'
-	        slackSend baseUrl: 'https://hooks.slack.com/services/', 
-                channel '#testing-java-slack-jenkins', 
-                color: 'good', 
-                message: 'Welcome to jenkins via slack, via Git con un Pipeline en Jenkis',
-                teamDomain: 'javahomecloud',
-                tokenCrendentialId: '4cyFjkMh078RGXbVAxXibqfc'
+	        slackSend baseUrl: 'https://hooks.slack.com/services/', channel '#testing-java-slack-jenkins', color: 'good', message: 'Welcome to jenkins via slack, via Git con un Pipeline en Jenkis', teamDomain: 'javahomecloud', tokenCrendentialId: '4cyFjkMh078RGXbVAxXibqfc'
             }
         }
     }
