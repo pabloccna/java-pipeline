@@ -17,18 +17,18 @@ pipeline {
         stage('Run') { 
             steps {
                 echo 'Running ...'
-	        	sh "cd /var/lib/jenkins/workspace/test-pipe/java"
+	        	sh "cd /var/lib/jenkins/workspace/java-pipeline/java"
 	        	sh "java HelloWorld"
             }
         stage('Slack notification ...') { 
             steps {
                 echo 'Notificating ...'
 	        	slackSend baseUrl: 'https://hooks.slack.com/services/', 
-                channel '#jenkins-xxxx-xxxx-xxx', 
+                channel '#testing-java-slack-jenkins', 
                 color: 'good', 
-                message: 'Welcome to jenkins slack via pipeline',
+                message: 'Welcome to jenkins via slack, via Git con un Pipeline en Jenkis',
                 teamDomain: 'javahomecloud',
-                tokenCrendentialId: 'slack-demo'
+                tokenCrendentialId: '4cyFjkMh078RGXbVAxXibqfc'
             }
         }
     }
