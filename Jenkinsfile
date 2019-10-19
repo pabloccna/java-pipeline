@@ -11,7 +11,7 @@ pipeline {
         stage('Build') { 
             steps {
 		echo 'Building ...'
-                sh "javac /var/lib/jenkins/workspace/test-pipe/java/HelloWorld.java"
+                sh "javac /var/lib/jenkins/workspace/java-pipeline/java/HelloWorld.java"
             }
         }
         stage('Run') { 
